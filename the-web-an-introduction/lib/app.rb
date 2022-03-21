@@ -14,13 +14,6 @@ get '/secret' do
 end
 
 get '/cat' do
-  "
-  <style>
-  img {
-    border-style: dashed;
-    border-color: red;
-    border-width: medium;
-  }
-  </style>
-  <img src = 'https://i.imgur.com/jFaSxym.png'>"
+  @random_name = ["Amigo", "Misty", "Almond"].sample
+  erb(:index)
 end
