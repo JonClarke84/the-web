@@ -1,3 +1,7 @@
-<%= @player_one.name %> attacked <%= @player_two.name %>
+<%= @game.player_one.name %> attacked <%= @game.player_two.name %>
 <br />
-<%= @player_two.name%>: <%= @player_two.hp%>HP
+<%= @game.player_two.name%>: <%= @game.player_two.hp%>HP
+<br />
+<form action='/play'>
+<input type='submit' value='Play'>
+</form>
