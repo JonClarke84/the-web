@@ -6,13 +6,21 @@ class Battle < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  enable :sessions
+
   get '/' do
     erb :index
   end
 
   post '/names' do
-    @player_one = params[:player_one]
-    @player_two = params[:player_two]
+    session[:player_one] = params[:player_one]
+    session[:player_two] = params[:player_two]
+    redirect to('/play')
+  end
+
+  get '/play' do
+    session[:player_one] = params[:player_one]
+    session[:player_two] = params[:player_two]
     erb :play
   end
 
