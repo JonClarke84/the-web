@@ -4,10 +4,6 @@ class Player
     @hp = 100
   end
 
-  def attack(player)
-    player.take_hit    
-  end
-
   def take_hit
     @hp -= 10
   end

@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require_relative 'lib/player'
+require_relative 'lib/game'
 
 class Battle < Sinatra::Base
   configure :development do
@@ -22,7 +23,7 @@ class Battle < Sinatra::Base
   get '/attack' do
     @player_one = $player_one
     @player_two = $player_two
-    @player_one.attack(@player_two)
+    Game.new.attack(@player_two)
     erb :attack
   end
 
