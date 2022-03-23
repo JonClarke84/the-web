@@ -23,4 +23,17 @@ describe Game do
       expect(game.player_two).to eq(player_two)
     end
   end
+
+  describe '#current_turn' do
+    it 'starts as player one' do
+      expect(game.current_turn).to eq player_one
+    end
+  end
+
+  describe '#switch_turns' do
+    it 'switches the turn' do
+      game.switch_turns
+      expect(game.current_turn).to eq player_two
+    end
+  end
 end
