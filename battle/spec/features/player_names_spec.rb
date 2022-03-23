@@ -4,7 +4,6 @@ feature 'adding player names' do
     fill_in 'player_one', with: 'Billy'
     fill_in 'player_two', with: 'Jimmy'
     click_button 'Submit'
-
     expect(page).to have_content 'Billy vs Jimmy'
   end
 end

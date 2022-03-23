@@ -9,6 +9,8 @@ class Battle < Sinatra::Base
   enable :sessions
 
   get '/' do
+    # session[:player_one_hp] = 100
+    # session[:player_two_hp] = 100
     erb :index
   end
 
@@ -19,8 +21,8 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    session[:player_one] = params[:player_one]
-    session[:player_two] = params[:player_two]
+    @player_one = session[:player_one]
+    @player_two = session[:player_two]
     erb :play
   end
 
