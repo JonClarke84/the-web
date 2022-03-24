@@ -1,13 +1,13 @@
-class Attack
+class Action
   def initialize(player)
     @player = player
   end
 
   def self.run(player)
-    new(player).run
+    new(player).attack
   end
 
-  def run
+  def attack
     @player.take_hit
   end
 end

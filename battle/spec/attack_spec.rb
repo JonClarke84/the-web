@@ -1,6 +1,6 @@
-require 'attack'
+require 'action'
 
-describe Attack do
+describe Action do
   subject(:object) { described_class }
   let(:player) { double :player }
 

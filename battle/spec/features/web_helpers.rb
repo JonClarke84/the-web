@@ -5,11 +5,11 @@ def sign_in_and_play
   click_button 'Submit'
 end
 
-def play_ten_times
-  count = 0
-  while count < 10
+def play_nine_times
+  count = 90
+  while count > 0
     play_round
-    count += 1
+    count -= 10
   end
 end
 

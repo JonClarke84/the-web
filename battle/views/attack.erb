@@ -1,4 +1,37 @@
-<% if @game.current_turn == @game.player_one %>
+<div class='content-top'>
+  <div class='grid-item'>
+  </div>
+  <div class='grid-item'><h1><%= @game.player_one.name%></h1></div>
+  <div class='grid-item'><h1>vs</h1></div>
+  <div class='grid-item'><h1><%= @game.player_two.name%></h1></div>
+  <div class='grid-item'>
+  </div>
+</div>
+
+<div class='content'>
+
+  <div class='grid-item'>
+  </div>
+
+  <div class='grid-item'>
+  <img src="https://thispersondoesnotexist.com/image">
+    <p><%= @game.player_one.name%>: <%= @game.player_one.hp%>HP</p>
+  </div>
+
+  <div class='grid-item'>
+  </div>
+
+  <div class='grid-item'>
+  <img src="https://thiscatdoesnotexist.com/">
+    <p><%= @game.player_two.name%>: <%= @game.player_two.hp%>HP</p>
+  </div>
+
+  <div class='grid-item'>
+  </div>
+
+</div>
+
+<h2><% if @game.current_turn == @game.player_one %>
 <%= @game.player_one.name %> attacked <%= @game.player_two.name %>
 <br />
 <%= @game.player_two.name%>: <%= @game.player_two.hp%>HP
@@ -7,7 +40,7 @@
 <br />
 <%= @game.player_one.name%>: <%= @game.player_one.hp%>HP
 <br />
-<% end %>
+<% end %></h2>
 <form action='/switch-turns' method='post'>
 <input type='submit' value='Play' class='button'>
 </form>
