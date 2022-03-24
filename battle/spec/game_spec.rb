@@ -5,13 +5,6 @@ describe Game do
   let(:player_one) { double :player }
   let(:player_two) { double :player }
 
-  describe '#attack' do
-    it 'player two takes 10 damage' do
-      expect(player_two).to receive(:take_hit)
-      game.attack(player_two)
-    end
-  end
-
   describe '#player_one' do
     it 'gets player one' do
       expect(game.player_one).to eq(player_one)
