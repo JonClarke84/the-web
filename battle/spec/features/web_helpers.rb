@@ -7,7 +7,10 @@ end
 
 def play_ten_times
   count = 0
-  play_round while count < 11
+  while count < 10
+    play_round
+    count += 1
+  end
 end
 
 def play_round
